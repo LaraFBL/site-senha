@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Senhas</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main class="container">
+    <header class="cabecalho">
+      <img src="unlock.svg" alt="Cadeado" class="icone">
+      <h1>Gerador de Senhas</h1>
+      <p>Crie senhas seguras com facilidade</p>
+    </header>
+
+    <section class="gerador">
+      <div class="campo-senha">
+        <input type="text" id="campo-senha" readonly>
+        <button id="btn-copiar" title="Copiar senha">📋</button>
+      </div>
+      <button id="btn-gerar">Gerar nova senha</button>
+    </section>
+
+    <section class="configuracoes">
+      <h2>Configurações</h2>
+      <div class="linha">
+        <label>Número de caracteres:</label>
+        <div class="controle">
+          <button class="btn-menor">-</button>
+          <span class="contador">12</span>
+          <button class="btn-maior">+</button>
+        </div>
+      </div>
+
+      <div class="linha">
+        <label><input type="checkbox" class="check" checked> Letras maiúsculas</label>
+        <label><input type="checkbox" class="check"> Letras minúsculas</label>
+        <label><input type="checkbox" class="check"> Números</label>
+        <label><input type="checkbox" class="check"> Símbolos</label>
+      </div>
+
+      <div class="forca-senha">
+        <div class="barra"><div class="forca"></div></div>
+        <p class="descricao-forca">Força da senha</p>
+        <p class="entropia"></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
